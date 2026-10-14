@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SAE Organigramme Carré Bleu Poitiers</title>
+<meta name="description" content="Organigramme de Carré Bleu Poitiers Sud.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SAE Organigramme Carré Bleu Poitiers">
+<meta property="og:title" content="SAE Organigramme Carré Bleu Poitiers">
+<meta property="og:description" content="Qui fait quoi chez Carré Bleu Poitiers Sud.">
+<meta name="robots" content="noindex">
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Public+Sans:wght@400;500;600&display=swap">
+
+<style>
+/* Registre corporate clair : aplats, filets fins, accordéons, aucune ombre. Organigramme réel de l'entreprise. */
+/* Parti pris assumé : un seul univers clair, comme un rapport institutionnel imprimé. */
+:root{
+  --page:#FFFFFF;
+  --bloc:#F4F7F9;
+  --bloc-creux:#EAF0F3;
+  --encre:#16272F;
+  --encre-douce:#5C7682;
+  --ligne:#DCE6EA;
+  --ligne-forte:#16272F;
+  --accent:#0A6E9E;
+  --accent-clair:#3FA3CC;
+  --accent-pale:#E4F1F8;
+  --or:#9A7B22;
+  --titre:"Manrope","Helvetica Neue",Arial,sans-serif;
+  --corps:"Public Sans","Segoe UI",system-ui,sans-serif;
+  color-scheme:light;
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--page); color:var(--encre);
+  font-family:var(--corps); font-size:17px; line-height:1.62;
+  margin:0; padding-block:0 64px; padding-left:20px; padding-right:20px;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:760px;margin:0 auto}
+h1,h2,h3{font-family:var(--titre);margin:0;text-wrap:balance}
+
+/* ---------- barre ---------- */
+.bar{
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+  padding-block:18px 16px;border-bottom:1px solid var(--ligne);
+}
+.ident{display:flex;align-items:center;gap:11px;min-width:0}
+.ident .txt{min-width:0}
+.ident .a{font-family:var(--titre);font-weight:800;font-size:14px;letter-spacing:-.01em;line-height:1.1}
+.ident .b{font-size:11px;color:var(--encre-douce);letter-spacing:.02em;margin-top:1px}
+.tag{
+  font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;
+  color:var(--or);background:#FBF5E3;border:1px solid #EADFBC;
+  border-radius:4px;padding:5px 9px;white-space:nowrap;
+}
+
+/* ---------- titre ---------- */
+.intro{padding-block:46px 40px}
+h1{font-size:clamp(34px,8.5vw,52px);font-weight:800;line-height:1.05;letter-spacing:-.03em}
+.chapo{color:var(--encre-douce);font-size:18px;margin-top:20px;max-width:54ch}
+
+.chiffres{display:flex;flex-wrap:wrap;margin-top:34px;border-top:1px solid var(--ligne)}
+.ch{flex:1 1 130px;min-width:0;padding:18px 0 4px;border-bottom:1px solid var(--ligne)}
+.ch b{display:block;font-family:var(--titre);font-size:32px;font-weight:800;line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.ch span{display:block;font-size:13px;color:var(--encre-douce);margin-top:6px;padding-right:10px}
+
+.section{padding-block:44px 0}
+h2{font-size:clamp(22px,5vw,27px);font-weight:700;letter-spacing:-.02em}
+.dek{color:var(--encre-douce);font-size:16px;margin-top:10px;max-width:56ch}
+
+/* ---------- arbre ---------- */
+.arbre{margin-top:26px}
+.arbre ul{list-style:none;margin:0;padding:0}
+.arbre ul ul{padding-left:24px}
+.arbre li{position:relative;padding-top:10px}
+.arbre ul ul > li::before{
+  content:"";position:absolute;left:-14px;top:0;bottom:0;border-left:1px solid #B9CBD3;
+}
+.arbre ul ul > li:last-child::before{bottom:auto;height:34px}
+.arbre ul ul > li::after{
+  content:"";position:absolute;left:-14px;top:34px;width:14px;border-top:1px solid #B9CBD3;
+}
+.noeud{
+  background:var(--bloc);border-left:3px solid var(--accent);
+  padding:13px 16px;display:block;transition:background .15s,opacity .2s;
+}
+.noeud.n1{background:var(--encre);border-left-color:var(--encre);color:#fff}
+.noeud.n1 .r{color:#B8CCD5}
+.noeud.n4{border-left-color:var(--accent-clair)}
+.noeud.pale{opacity:.3}
+.noeud.vif{background:var(--accent-pale)}
+.noeud .nm{display:block;font-family:var(--titre);font-weight:700;font-size:16.5px;letter-spacing:-.01em;line-height:1.3}
+.noeud .nm + .nm{margin-top:2px}
+.noeud .r{display:block;font-size:14px;color:var(--encre-douce);margin-top:4px}
+.noeud .lien{
+  display:block;margin-top:9px;padding-top:9px;border-top:1px dashed #B9CBD3;
+  font-size:13.5px;color:var(--encre-douce);
+}
+.noeud .lien b{font-weight:600;color:var(--encre)}
+
+/* ---------- aiguilleur ---------- */
+.liens{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.lien-b{
+  font:500 15px/1 var(--corps);color:var(--encre);background:var(--page);
+  border:1px solid var(--ligne);border-radius:4px;padding:11px 15px;cursor:pointer;
+  transition:border-color .15s,color .15s,background .15s;
+}
+.lien-b:hover{border-color:var(--accent);color:var(--accent)}
+.lien-b[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
+.lien-b:focus-visible,.acc:focus-visible,.raz:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.raz{
+  font:500 15px/1 var(--corps);color:var(--encre-douce);background:none;
+  border:1px solid transparent;border-radius:4px;padding:11px 8px;cursor:pointer;
+  text-decoration:underline;text-underline-offset:3px;
+}
+.rep{margin-top:20px;padding:18px 20px;background:var(--accent-pale);border-left:3px solid var(--accent);font-size:16px}
+.rep .q{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);font-weight:600;display:block;margin-bottom:9px}
+.rep b{font-family:var(--titre);font-weight:700;font-size:17px}
+.rep .f{color:var(--encre-douce);font-size:15px}
+.rep .ind{display:block;margin-top:10px;font-size:13px;color:var(--encre-douce)}
+
+/* ---------- annuaire ---------- */
+.fiche{background:var(--bloc);margin-top:10px;transition:opacity .2s}
+.fiche.pale{opacity:.34}
+.fiche.vif{box-shadow:inset 3px 0 0 var(--accent)}
+.acc{
+  width:100%;display:flex;align-items:flex-start;justify-content:space-between;gap:18px;
+  background:none;border:0;cursor:pointer;text-align:left;padding:26px 24px;font-family:var(--titre);
+}
+.acc .nom{font-size:clamp(19px,4.6vw,23px);font-weight:700;letter-spacing:-.02em;line-height:1.25;color:var(--encre)}
+.acc .nom span{display:block;font-family:var(--corps);font-weight:400;font-size:16px;color:var(--encre-douce);letter-spacing:0;margin-top:2px}
+.pm{flex-shrink:0;width:26px;height:26px;position:relative;margin-top:4px}
+.pm::before,.pm::after{
+  content:"";position:absolute;left:50%;top:50%;background:var(--accent);
+  transform:translate(-50%,-50%);transition:opacity .2s,transform .2s;
+}
+.pm::before{width:22px;height:2.5px}
+.pm::after{width:2.5px;height:22px}
+.acc[aria-expanded="true"] .pm::after{opacity:0;transform:translate(-50%,-50%) rotate(90deg)}
+
+.corps{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s ease}
+.acc[aria-expanded="true"] + .corps{grid-template-rows:1fr}
+.corps > div{overflow:hidden}
+.dedans{padding:0 24px 30px}
+
+.gens{border-top:1px solid var(--ligne)}
+.gen{display:flex;align-items:center;gap:14px;padding:13px 0;border-bottom:1px solid var(--ligne)}
+.ini{
+  width:42px;height:42px;border-radius:50%;flex-shrink:0;display:grid;place-items:center;
+  font-family:var(--titre);font-weight:700;font-size:14px;letter-spacing:.02em;color:#fff;background:var(--accent);
+}
+.gen .t{min-width:0}
+.gen .n{font-family:var(--titre);font-weight:700;font-size:16.5px;line-height:1.25}
+.gen .p{font-size:14.5px;color:var(--encre-douce);line-height:1.35}
+
+.ligne{margin:18px 0 0;font-size:16.5px;line-height:1.62}
+.ligne strong{font-weight:600}
+.encart{margin-top:20px;padding:18px 20px;background:var(--page);border:1px solid var(--ligne)}
+.encart .t{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:10px}
+.encart ul{margin:0;padding-left:20px}
+.encart li{margin-bottom:6px;font-size:16px}
+.encart li:last-child{margin-bottom:0}
+.mention{margin-top:16px;font-size:13px;color:var(--encre-douce)}
+
+/* ---------- répartition ---------- */
+.jauge{display:flex;height:10px;margin-top:26px;background:var(--bloc-creux)}
+.jseg{height:100%}
+.jtab{width:100%;border-collapse:collapse;margin-top:24px;font-size:16px}
+.jtab th{
+  text-align:left;font-family:var(--titre);font-weight:700;font-size:12px;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--encre-douce);padding:0 0 11px;border-bottom:1px solid var(--ligne-forte);
+}
+.jtab td{padding:13px 0;border-bottom:1px solid var(--ligne);vertical-align:middle}
+.jtab th:nth-child(2),.jtab td:nth-child(2){text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;padding-left:12px}
+.puce{display:inline-block;width:10px;height:10px;margin-right:10px}
+
+/* ---------- pied ---------- */
+footer{margin-top:56px;padding-top:26px;border-top:2px solid var(--ligne-forte);font-size:15px;color:var(--encre-douce)}
+.avis{background:var(--bloc);border-left:3px solid var(--or);padding:18px 20px;margin-bottom:22px;font-size:15px;line-height:1.6;color:var(--encre)}
+.avis b{font-weight:600}
+footer p{margin:0 0 9px}
+footer strong{color:var(--encre);font-weight:600}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+
+  <div class="bar">
+    <div class="ident">
+      <svg width="34" height="34" viewBox="0 0 34 34" role="img" aria-label="Emblème du projet">
+        <rect x="1" y="1" width="32" height="32" rx="8" fill="#0A6E9E"/>
+        <path d="M7 20c2.5 0 2.5-2.5 5-2.5s2.5 2.5 5 2.5 2.5-2.5 5-2.5 2.5 2.5 5 2.5" fill="none" stroke="#FFFFFF" stroke-width="1.9" stroke-linecap="round"/>
+        <path d="M7 25.5c2.5 0 2.5-2.5 5-2.5s2.5 2.5 5 2.5 2.5-2.5 5-2.5 2.5 2.5 5 2.5" fill="none" stroke="#FFFFFF" stroke-width="1.9" stroke-linecap="round" opacity=".45"/>
+        <rect x="10" y="8" width="14" height="4.4" rx="1.4" fill="#FFFFFF" opacity=".85"/>
+      </svg>
+      <div class="txt">
+        <div class="a">Piscines Carré Bleu Poitiers</div>
+        <div class="b">SBC Saint Benoit Constructions</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="intro">
+    <h1>Organigramme</h1>
+    <p class="chapo">Dix huit personnes, quatre niveaux hiérarchiques, trois branches placées sous la direction du gérant : la conduite de travaux, la direction commerciale et l'assistance commerciale.</p>
+
+    <div class="chiffres">
+      <div class="ch"><b>18</b><span>collaborateurs</span></div>
+      <div class="ch"><b>4</b><span>niveaux hiérarchiques</span></div>
+      <div class="ch"><b>3</b><span>branches sous la direction</span></div>
+      <div class="ch"><b>12</b><span>rattachés à la conduite de travaux</span></div>
+    </div>
+  </div>
+
+  <div class="section" style="padding-top:0">
+    <h2>Vue d'ensemble</h2>
+    <p class="dek">La hiérarchie telle qu'elle apparaît sur l'organigramme de l'entreprise.</p>
+    <div class="arbre" id="arbre"></div>
+  </div>
+
+  <div class="section">
+    <h2>Trouver le bon interlocuteur</h2>
+    <p class="dek">Sélectionnez un sujet. Les fonctions concernées se détachent dans l'organigramme et dans l'annuaire.</p>
+    <div class="liens" id="liens"></div>
+    <div class="rep" id="rep" hidden></div>
+  </div>
+
+  <div class="section">
+    <h2>Annuaire par fonction</h2>
+    <p class="dek">Touchez une fonction pour voir les personnes concernées, leur rattachement et leurs missions types.</p>
+    <div id="annuaire"></div>
+  </div>
+
+  <div class="section">
+    <h2>Répartition des effectifs</h2>
+    <p class="dek">Les deux tiers de l'effectif sont rattachés à la conduite de travaux, ce qui reflète une activité centrée sur le chantier.</p>
+    <div class="jauge" id="jauge"></div>
+    <table class="jtab">
+      <thead><tr><th>Ensemble</th><th>Effectif</th></tr></thead>
+      <tbody id="jtb"></tbody>
+    </table>
+  </div>
+
+  <footer>
+    <div class="avis">
+      <b>Source.</b> Les noms, les fonctions et les liens hiérarchiques proviennent de l'organigramme de l'entreprise transmis à l'équipe projet. Alexis DUCLOT a été ajouté à l'équipe commerciale à la demande de l'équipe projet. Les missions types de chaque fonction ne figurent pas sur ce document : elles ont été rédigées par l'équipe projet à partir des usages du métier et restent à valider avec l'entreprise. Le rattachement hiérarchique de la fonction Services n'est pas précisé sur l'organigramme source.
+    </div>
+    <p>Document sans lien officiel avec l'entreprise.</p>
+    <p>SAE BUT GEA &middot; 2026</p>
+  </footer>
+</div>
+
+<script>
+const GROUPES = [
+  { id:"marie", titre:"Direction",
+    gens:[{ n:"Olivier MARIE", p:"Gérant", i:"OM" }],
+    rat:"Sommet de l'organigramme. Trois branches sont placées sous sa responsabilité : la conduite de travaux, l'assistance commerciale et la direction commerciale.",
+    missions:["Pilotage général de l'entreprise","Relation avec le réseau Carré Bleu","Décisions stratégiques et engagements contractuels"],
+    tags:["decision"] },
+
+  { id:"planchon", titre:"Conduite de travaux",
+    gens:[{ n:"Jérémy PLANCHON", p:"Conducteur de travaux", i:"JP" }],
+    rat:"Rattaché au gérant. Encadre les techniciens et les chefs d'équipe.",
+    missions:["Planification des chantiers","Coordination des équipes et des sous traitants","Réception des ouvrages"],
+    tags:["chantier","planning"] },
+
+  { id:"chefs", titre:"Chefs d'équipe",
+    gens:[{ n:"Benoît CHEVALLIER", p:"Chef d'équipe", i:"BC" },{ n:"Antony GUYCNÉ", p:"Chef d'équipe", i:"AG" },
+          { n:"Florian MORILLON", p:"Chef d'équipe", i:"FM" },{ n:"Fabien AUCIS", p:"Chef d'équipe", i:"FA" }],
+    rat:"Rattachés à la conduite de travaux. Encadrent les seconds.",
+    missions:["Conduite de l'équipe sur le chantier","Répartition des tâches et suivi de l'avancement","Référents techniques sur la réalisation du bassin"],
+    tags:["chantier"] },
+
+  { id:"seconds", titre:"Seconds",
+    gens:[{ n:"Malcolm AUGEREAU", p:"Second", i:"MA" },{ n:"Lucas MONTOUX", p:"Second", i:"LM" },
+          { n:"Jessy BOURDON", p:"Second", i:"JB" },{ n:"Nicolas FERREIRA", p:"Second", i:"NF" }],
+    rat:"Rattachés aux chefs d'équipe.",
+    missions:["Assistance du chef d'équipe sur le chantier","Réalisation des travaux de construction"],
+    tags:["chantier"] },
+
+  { id:"tech", titre:"Techniciens",
+    gens:[{ n:"Valérie BEGVOIN", p:"Technicienne", i:"VB" },{ n:"Alexis FOUCHEAU", p:"Technicien", i:"AF" },
+          { n:"Brandon ROBIN", p:"Technicien", i:"BR" }],
+    rat:"Rattachés à la conduite de travaux, en lien avec la fonction Services.",
+    missions:["Installation et mise en service des équipements","Entretien et dépannage"],
+    tags:["equipement"] },
+
+  { id:"ruiz", titre:"Services",
+    gens:[{ n:"Mathieu RUIZ", p:"Services", i:"MR" }],
+    rat:"Relié aux techniciens. Le rattachement hiérarchique n'est pas précisé sur l'organigramme source.",
+    missions:["Organisation des interventions de service","Appui aux techniciens"],
+    tags:["equipement"] },
+
+  { id:"lebeaupin", titre:"Direction commerciale",
+    gens:[{ n:"Christophe LEBEAUPIN", p:"Responsable commercial", i:"CL" }],
+    rat:"Rattaché au gérant. Encadre l'équipe commerciale.",
+    missions:["Pilotage de l'activité commerciale","Suivi des devis importants","Relation avec les prescripteurs"],
+    tags:["devis","client"] },
+
+  { id:"commerciaux", titre:"Équipe commerciale",
+    gens:[{ n:"Carole PERON", p:"Équipe commerciale", i:"CP" },{ n:"Alexis DUCLOT", p:"Équipe commerciale", i:"AD" }],
+    rat:"Rattachée au responsable commercial.",
+    missions:["Accueil et conseil des clients","Établissement des devis","Suivi des dossiers jusqu'à la signature"],
+    tags:["devis","client"] },
+
+  { id:"pincerin", titre:"Assistance commerciale",
+    gens:[{ n:"Mélissa PINÇERIN", p:"Assistante commerciale", i:"MP" }],
+    rat:"Rattachée au gérant.",
+    missions:["Accueil téléphonique et physique","Préparation et suivi des dossiers clients","Appui administratif à l'équipe commerciale"],
+    tags:["client"] }
+];
+
+const ARBRE = {
+  id:"marie", n1:true, noms:["Olivier MARIE"], role:"Gérant",
+  enfants:[
+    { id:"planchon", noms:["Jérémy PLANCHON"], role:"Conducteur de travaux",
+      enfants:[
+        { id:"tech", noms:["Valérie BEGVOIN","Alexis FOUCHEAU","Brandon ROBIN"], role:"Techniciens",
+          lien:"Lien avec <b>Services</b> : Mathieu RUIZ" },
+        { id:"chefs", noms:["Benoît CHEVALLIER","Antony GUYCNÉ","Florian MORILLON","Fabien AUCIS"], role:"Chefs d'équipe",
+          enfants:[ { id:"seconds", n4:true, noms:["Malcolm AUGEREAU","Lucas MONTOUX","Jessy BOURDON","Nicolas FERREIRA"], role:"Seconds" } ] }
+      ] },
+    { id:"pincerin", noms:["Mélissa PINÇERIN"], role:"Assistante commerciale" },
+    { id:"lebeaupin", noms:["Christophe LEBEAUPIN"], role:"Responsable commercial",
+      enfants:[ { id:"commerciaux", noms:["Carole PERON","Alexis DUCLOT"], role:"Équipe commerciale" } ] }
+  ]
+};
+const SERVICES_NOEUD = { id:"ruiz", noms:["Mathieu RUIZ"], role:"Services",
+  lien:"Relié aux <b>techniciens</b>. Rattachement hiérarchique non précisé sur le document source." };
+
+const SUJETS = [
+  { tag:"chantier",  label:"Un chantier" },
+  { tag:"planning",  label:"Un planning" },
+  { tag:"devis",     label:"Un devis" },
+  { tag:"client",    label:"Un client" },
+  { tag:"equipement",label:"Un équipement ou une panne" },
+  { tag:"decision",  label:"Une décision importante" }
+];
+
+const TEINTE_GROUPE = {
+  marie:"#16272F", planchon:"#0A6E9E", chefs:"#0A6E9E", seconds:"#3FA3CC", tech:"#0A6E9E", ruiz:"#5C7682",
+  lebeaupin:"#9A7B22", commerciaux:"#9A7B22", pincerin:"#9A7B22"
+};
+
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+/* ---- arbre ---- */
+function noeudHTML(n){
+  const cls = "noeud" + (n.n1 ? " n1" : "") + (n.n4 ? " n4" : "");
+  let h = '<li><div class="' + cls + '" data-id="' + n.id + '">'
+        + n.noms.map(x => '<span class="nm">' + esc(x) + '</span>').join("")
+        + '<span class="r">' + esc(n.role) + '</span>'
+        + (n.lien ? '<span class="lien">' + n.lien + '</span>' : '')
+        + '</div>';
+  if(n.enfants && n.enfants.length){
+    h += '<ul>' + n.enfants.map(noeudHTML).join("") + '</ul>';
+  }
+  return h + '</li>';
+}
+function buildArbre(){
+  document.getElementById("arbre").innerHTML =
+    '<ul>' + noeudHTML(ARBRE) + '</ul>'
+  + '<ul style="margin-top:22px"><li style="padding-top:0"><div class="noeud" data-id="ruiz" style="border-left-color:#5C7682">'
+  +   '<span class="nm">' + esc(SERVICES_NOEUD.noms[0]) + '</span>'
+  +   '<span class="r">' + esc(SERVICES_NOEUD.role) + '</span>'
+  +   '<span class="lien">' + SERVICES_NOEUD.lien + '</span>'
+  + '</div></li></ul>';
+}
+
+/* ---- annuaire ---- */
+function ficheHTML(g, i){
+  const sous = g.gens.length > 1 ? g.gens.length + " personnes" : g.gens[0].p;
+  return ''
+  + '<div class="fiche" id="f-' + g.id + '">'
+  +   '<button class="acc" id="a-' + g.id + '" aria-expanded="false" aria-controls="c-' + g.id + '">'
+  +     '<span class="nom">' + esc(g.titre) + '<span>' + esc(sous) + '</span></span>'
+  +     '<span class="pm" aria-hidden="true"></span>'
+  +   '</button>'
+  +   '<div class="corps" id="c-' + g.id + '"><div><div class="dedans">'
+  +     '<div class="gens">'
+  +       g.gens.map(p => '<div class="gen"><span class="ini" style="background:' + TEINTE_GROUPE[g.id] + '">' + esc(p.i) + '</span>'
+  +         '<span class="t"><span class="n" style="display:block">' + esc(p.n) + '</span><span class="p" style="display:block">' + esc(p.p) + '</span></span></div>').join("")
+  +     '</div>'
+  +     '<p class="ligne"><strong>Rattachement :</strong> ' + esc(g.rat) + '</p>'
+  +     '<div class="encart"><div class="t">Missions types de la fonction</div><ul>'
+  +       g.missions.map(x => '<li>' + esc(x) + '</li>').join("")
+  +     '</ul></div>'
+  +     '<p class="mention">Missions types rédigées par l\'équipe projet, à valider avec l\'entreprise.</p>'
+  +   '</div></div></div>'
+  + '</div>';
+}
+function buildAnnuaire(){
+  document.getElementById("annuaire").innerHTML = GROUPES.map(ficheHTML).join("");
+  GROUPES.forEach(g => {
+    const b = document.getElementById("a-" + g.id);
+    b.addEventListener("click", () => {
+      b.setAttribute("aria-expanded", b.getAttribute("aria-expanded") === "true" ? "false" : "true");
+    });
+  });
+}
+
+/* ---- aiguilleur ---- */
+let actif = null;
+function buildLiens(){
+  const c = document.getElementById("liens");
+  c.innerHTML = SUJETS.map(s =>
+    '<button class="lien-b" data-tag="' + s.tag + '" aria-pressed="false">' + esc(s.label) + '</button>'
+  ).join("") + '<button class="raz" id="raz">Tout afficher</button>';
+  c.querySelectorAll(".lien-b").forEach(b =>
+    b.addEventListener("click", () => choisir(b.dataset.tag === actif ? null : b.dataset.tag)));
+  document.getElementById("raz").addEventListener("click", () => choisir(null));
+}
+
+function choisir(tag){
+  actif = tag;
+  document.querySelectorAll(".lien-b").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.tag === tag)));
+  const rep = document.getElementById("rep");
+  document.querySelectorAll(".fiche").forEach(f => f.classList.remove("pale","vif"));
+  document.querySelectorAll(".noeud").forEach(n => n.classList.remove("pale","vif"));
+  if(!tag){ rep.hidden = true; return; }
+
+  const sel = GROUPES.filter(g => g.tags.includes(tag));
+  const label = (SUJETS.find(s => s.tag === tag) || {}).label || "";
+
+  GROUPES.forEach(g => {
+    const on = sel.some(s => s.id === g.id);
+    document.getElementById("f-" + g.id).classList.add(on ? "vif" : "pale");
+    document.querySelectorAll('.noeud[data-id="' + g.id + '"]').forEach(n => n.classList.add(on ? "vif" : "pale"));
+  });
+
+  rep.hidden = false;
+  rep.innerHTML = '<span class="q">' + esc(label) + '</span>'
+    + sel.map(g => '<div><b>' + esc(g.titre) + '</b> <span class="f">&middot; ' + esc(g.gens.map(p => p.n).join(", ")) + '</span></div>').join("")
+    + '<span class="ind">Orientation indicative établie d\'après les fonctions, à confirmer avec l\'entreprise.</span>';
+
+  const first = document.getElementById("a-" + sel[0].id);
+  if(first){
+    first.setAttribute("aria-expanded","true");
+    first.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block:"center" });
+  }
+}
+
+/* ---- répartition ---- */
+function buildJauge(){
+  const ens = [
+    { l:"Conduite de travaux et équipes rattachées", n:12, c:"#0A6E9E" },
+    { l:"Commercial, direction et assistance", n:4, c:"#9A7B22" },
+    { l:"Services", n:1, c:"#5C7682" },
+    { l:"Direction", n:1, c:"#16272F" }
+  ];
+  const total = ens.reduce((s,e) => s + e.n, 0);
+  document.getElementById("jauge").innerHTML = ens.map(e =>
+    '<div class="jseg" style="flex:' + e.n + ';background:' + e.c + '" title="' + esc(e.l) + '"></div>').join("");
+  document.getElementById("jtb").innerHTML = ens.map(e =>
+    '<tr><td><span class="puce" style="background:' + e.c + '"></span>' + esc(e.l) + '</td><td>' + e.n + '</td></tr>').join("")
+    + '<tr><td><strong>Total</strong></td><td><strong>' + total + '</strong></td></tr>';
+}
+
+buildArbre();
+buildAnnuaire();
+buildLiens();
+buildJauge();
+</script>
+
+</body>
+</html>
